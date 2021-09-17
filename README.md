@@ -2,11 +2,15 @@
 
 - [Links](#links)
 
-### links 
+## Links 
+### Projects
 
+- [simple-todo](./simple-todo)
+- [password-generator](./password-generator)
+- [cpf-generator](./cpf-generator)
 - [cpf-validator](./cpf-validator)
 - [simple-cpf-validator](./simple-cpf-validator)
-- [simple-todo](./simple-todo)
+- [simple-calculator](./simple-calculator)
 - [imc](./imc)
-- [form-with-validation](./form-with-validation)
 - [timer](./timer)
+- [form-with-validation](./form-with-validation)
