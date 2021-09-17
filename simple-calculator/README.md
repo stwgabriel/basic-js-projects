@@ -1,8 +1,8 @@
 # Simple Calculator
 
-### [Live Preview](https://stwgabriel.space/simple-calculator/)
+### [Live Preview](https://stwgabriel.space/basic-js-projects/simple-calculator/)
 
-![preview](https://github.com/stwgabriel/simple-calculator/blob/main/src/assets/screenshot.png)
+![preview](https://github.com/stwgabriel/basic-js-projects/simple-calculator/blob/main/src/assets/screenshot.png)
 
 ## Description
 

@@ -4,7 +4,7 @@
 
 the file (cpf-validator.js) receives a string with the cpf number and returns true or false.
 
-### [Live Preview](https://stwgabriel.space/validador-de-cpf/)
+### [Live Preview](https://stwgabriel.space/basic-js-projects/cpf-validator/)
 
 ![Preview](https://github.com/stwgabriel/validador-de-cpf/blob/main/.github/screenshot.png)
 

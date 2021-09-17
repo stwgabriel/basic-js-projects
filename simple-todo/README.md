@@ -1,8 +1,8 @@
 # Simple ToDo List app
 
-### [Live Preview](https://stwgabriel.space/simple-todo/)
+### [Live Preview](https://stwgabriel.space/basic-js-projects/simple-todo/)
 
-![preview](https://github.com/stwgabriel/simple-todo/blob/main/src/assets/screenshot.png)
+![preview](https://github.com/stwgabriel/basic-js-projects/simple-todo/blob/main/src/assets/screenshot.png)
 
 ## Descrição
 

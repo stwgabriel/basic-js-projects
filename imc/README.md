@@ -4,7 +4,7 @@ Para visualizar os arquivos do projeto faça o download dos arquivos
 <br>
 ou execute `git clone https://github.com/StwGabriel/imc.git` em um terminal git bash ou outro de sua preferencia
 
-### Veja em : https://stwgabriel.github.io/imc/
+### Veja em : [live preview](https://stwgabriel.github.io/basic-js-projects/imc/)
 ### Versão desktop
 ![Desk version](assets/imccalculator.gif)
 
