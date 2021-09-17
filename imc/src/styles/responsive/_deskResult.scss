@@ -1,0 +1,26 @@
+//
+.resultDesk {
+
+   background   : #fff;
+   border-radius: 2rem;
+   box-shadow   : 0 0 5rem #0003;
+
+   height : 100%;
+   width  : min(90%, 50rem);
+   padding: 2rem 4rem;
+
+
+   .imcData {
+
+      display        : flex;
+      flex-direction : column;
+      align-items    : center;
+      justify-content: space-between;
+
+      height: 100%;
+      width : 100%;
+
+   }
+
+   @import './imcData';
+}

@@ -1,0 +1,38 @@
+.display {
+
+   display        : flex;
+   flex-direction : column;
+   justify-content: end;
+   align-items    : flex-end;
+   font-size      : 4rem;
+
+   width: 100%;
+
+   padding      : clamp(1.5rem, 2vw, 5rem);
+
+   input {
+
+      background: transparent;
+      border     : none;
+      color      : unset;
+      font-size  : unset;
+      font-weight: 700;
+      text-align : end;
+      padding    : .7rem;
+      width      : 100%;
+
+      animation: appear .3s backwards;
+
+      &:focus {
+
+         outline: none;
+      }
+   }
+
+   input.secondary-display {
+
+      color      : #5f5f5f;
+      font-size  : 1.6rem;
+      font-weight: 500;
+   }
+}

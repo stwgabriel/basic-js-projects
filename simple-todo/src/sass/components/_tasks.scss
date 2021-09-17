@@ -1,0 +1,15 @@
+@use 'task-box.scss';
+
+#tasks, #checked-tasks {
+
+   width: 100%;
+
+   li {
+
+      width          : 100%;
+      display        : flex;
+      justify-content: center;
+      align-items    : center;
+
+   }
+}

@@ -1,0 +1,63 @@
+.task-header {
+
+   width: 100%;
+
+   h1 {
+
+      color: #6A58A2;
+      font-size  : 3rem;
+      text-align : center;
+
+      margin: 1rem 0;
+   }
+
+   hr {
+
+      background-color: #0001;
+      border-radius   : 2rem;
+
+      border: none;
+      height: .2rem;
+      width : 100%;
+
+      margin-bottom: 2rem;
+   }
+
+   .input-container {
+
+      background   : #fff;
+      border-radius: 2rem;
+      box-shadow: 0 0 20px #0001;
+
+      display: flex;
+
+      width: 100%;
+
+      padding: 1rem 2rem;
+   }
+
+   input {
+
+      border       : none;
+      border-bottom: solid .2rem #6A58A2aa;
+      border-radius: .5rem;
+      color: #6A58A2;
+      outline-color: #6A58A255;
+      font-size    : clamp(1.8rem, 2vw, 2.2rem);
+      font-weight: 700;
+
+      flex: 1;
+
+      padding     : .5rem;
+      margin-right: 1rem;
+
+      min-width: 0;
+
+      &:active,
+      &:hover,
+      &:focus {
+
+         background: #0001;
+      }
+   }
+}

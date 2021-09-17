@@ -1,0 +1,156 @@
+* {
+
+   box-sizing: border-box;
+   padding   : 0;
+   margin    : 0;
+}
+
+:root {
+
+   font-size: 62.5%;
+}
+
+body {
+
+   background: linear-gradient(-225deg, #3ec5b3, #6f50ce);
+
+   display        : flex;
+   align-items    : center;
+   justify-content: center;
+
+   width     : 100%;
+   min-height: 100vh;
+
+   #app {
+
+      background    : #f2f2f2;
+      border-radius : 2rem;
+      box-shadow    : 0 0 25px #0001;
+      font-family   : sans-serif;
+      display       : flex;
+      flex-direction: column;
+
+      padding: 6rem clamp(2rem, 8vw, 5rem);
+
+      width: min(90%, 50rem);
+   }
+
+   h2 {
+
+      color        : #6A58A2;
+      font-size    : 2.3rem;
+      margin-bottom: 2rem;
+   }
+
+   span {
+
+      color : #0009;
+      margin: 1rem 0;
+
+      font-size: 1.1rem;
+   }
+
+   .input-block {
+
+      display : flex;
+      position: relative;
+   }
+
+   input {
+
+      background   : #f2f2f2;
+      box-shadow   : inset 0 0 15px #0002;
+      border-radius: 1rem;
+      border       : solid .1rem #6A58A2;
+      color        : #6A58A2;
+      font-size    : 2rem;
+      font-weight  : 600;
+
+      flex: 1;
+
+      width         : 100%;
+      padding       : .5rem;
+      margin-right  : 1rem;
+      outline-offset: .2rem;
+
+      &:hover,
+      &:active,
+      &:focus {
+
+         background-color: #0001;
+         border          : solid .1rem transparent;
+         outline         : solid .2rem #6A58A2;
+      }
+   }
+
+   .inputs {
+
+      width  : clamp(12rem, 70vw, 50rem);
+      display: flex;
+
+      position: relative;
+   }
+
+   input#ghost-input {
+
+      background: #0005;
+      color     : transparent;
+      border    : none;
+      outline   : none;
+      box-shadow: none;
+
+      position: absolute;
+      left    : -2%;
+      top     : 0%;
+
+      height: 100%;
+
+      opacity: 0OP;
+
+   }
+
+   .validate-button {
+
+      background   : #6A58A2;
+      border       : none;
+      border-radius: 1rem;
+      color        : #fff;
+
+      padding: 1.2rem;
+   }
+
+   .isvalid {
+
+      background   : #0002;
+      border-radius: 1rem;
+      box-shadow   : inset 0 0 10px #0002;
+      color        : #6A58A2;
+      font-size    : clamp(1rem, 4vw, 1.8rem);
+      font-weight  : 600;
+      text-shadow  : 0 0 15px #0007;
+
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+
+      width: 100%;
+
+      padding: 2rem 0;
+
+      margin-top: 2rem;
+
+      transition: color, background, .2s;
+
+      &.--valid {
+
+         background: #50FA7B;
+         color     : #fff;
+      }
+
+      &.--invalid {
+
+         background: #FF5555;
+         color     : #fff;
+      }
+   }
+}

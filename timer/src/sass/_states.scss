@@ -1,0 +1,17 @@
+.hidden {
+
+   display: none;
+}
+
+.visible {
+
+   display: auto;
+}
+
+.disable {
+
+   filter: grayscale(1);
+}
+.active {
+   filter: grayscale(0);
+}

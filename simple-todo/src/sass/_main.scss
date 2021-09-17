@@ -1,0 +1,101 @@
+// 
+:root {
+
+   font-size: 62.5%;
+
+   font-family: 'Montserrat', sans-serif;
+}
+
+* {
+
+   box-sizing: border-box;
+   padding   : 0;
+   margin    : 0;
+}
+
+li {
+
+   list-style: none;
+}
+
+body {
+
+   background     : linear-gradient(-225deg, #3ec5b3, #6f50ce);
+   background-size: 150%;
+
+   font-weight: 600;
+
+   position : relative;
+   animation: change 5s ease-in-out infinite;
+
+   min-height: 100vh;
+   width     : 100%;
+
+   display        : flex;
+   justify-content: center;
+}
+
+.task-app {
+
+   background   : #eee;
+   border-radius: 1rem;
+
+   display        : flex;
+   flex-direction : column;
+   justify-content: center;
+   align-items    : center;
+
+   width: min(50rem, 90vw);
+
+   padding   : 2rem;
+   margin: 10rem 0;
+
+   animation: appear .5s .2s backwards;
+}
+
+@keyframes change {
+
+   0% {
+
+      background-position: 0%, 50%;
+   }
+
+   50% {
+
+      background-position: 100%, 50%;
+   }
+
+   100% {
+
+      background-position: 0%, 50%;
+   }
+
+}
+
+@keyframes down {
+
+   from {
+
+      opacity  : 0;
+      transform: translateY(-1rem);
+   }
+
+   to {
+
+      opacity  : 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes appear {
+
+   from {
+
+      opacity: 0;
+   }
+
+   to {
+
+      opacity: 1;
+   }
+}

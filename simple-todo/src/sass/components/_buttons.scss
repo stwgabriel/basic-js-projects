@@ -1,0 +1,74 @@
+button {
+
+   background-color: #0000;
+   cursor          : pointer;
+   border          : none;
+   border-radius   : 100%;
+   display         : flex;
+   align-items     : center;
+   justify-content : center;
+
+   padding: 0;
+   margin : 0;
+   height : 4rem;
+   width  : 4rem;
+
+   transition: background, box-shadow, .3s;
+
+   &:hover {
+
+      background-color: #6A58A240 !important;
+   }
+}
+
+button.delete-task-button {
+
+   margin-left: .2rem;
+
+   &::after {
+
+      content : ' ';
+      position: relative;
+      top     : 0;
+      left    : 0;
+
+      background: url(https://stwgabriel.space/simple-todo/src/assets/trash.svg) no-repeat center;
+
+      background-size: 55%;
+
+      height: 90%;
+      width : 90%;
+   }
+}
+
+button.add-task-button {
+
+   display        : flex;
+   justify-content: center;
+   align-items    : center;
+
+   img {
+
+      width: 75%;
+   }
+}
+
+button.check-uncheck-button {
+
+   &::after {
+
+      content : '';
+      position: relative;
+      top     : 0;
+      left    : 0;
+
+      background     : url(https://stwgabriel.space/simple-todo/src/assets/check.svg) no-repeat center;
+      background-size: 60%;
+      border-radius  : .5rem;
+
+      width : 60%;
+      height: 60%;
+
+      transition: background .4s;
+   }
+}

@@ -1,0 +1,39 @@
+.theme--dark {
+
+   background: #23242d;
+
+   #app {
+
+      background: #23242d;
+
+      color: #fff;
+
+      .keypad {
+
+         background: #282d37;
+
+         .key {
+
+            background: #262a33;
+            box-shadow: 0 0 5px #23242d33;
+
+            color: #fff;
+         }
+
+         .special-character {
+
+            color: #6A58A2;
+         }
+      }
+   }
+
+   .theme-switch {
+
+      background: #3b3f49;
+
+      .circle {
+
+         transform: translate(15%, -50%);
+      }
+   }
+}

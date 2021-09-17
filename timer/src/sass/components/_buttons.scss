@@ -1,0 +1,60 @@
+@use '../abstracts/'as color;
+
+.timer-button {
+
+   background   : transparent;
+   border       : solid .3rem #6a58a2;
+   box-shadow   : 0 0 5px color.$shadow;
+   border-radius: 100%;
+
+   cursor: pointer;
+
+   height: 5rem;
+   width : 5rem;
+
+   display    : grid;
+   place-items: center;
+   padding    : 1rem;
+   margin     : 0 1rem;
+
+   animation-name     : appear;
+   animation-duration : .4s;
+   animation-fill-mode: backwards;
+
+   img {
+
+      max-width: 90%;
+   }
+}
+
+#start-button {
+
+   img {
+
+      width       : 70%;
+      margin-right: -15%;
+   }
+}
+
+#pause-button {
+
+   img {
+
+      width: 70%;
+   }
+}
+
+#resume-button {
+
+   img {
+      margin-right: -15%;
+   }
+}
+
+#stop-button {
+
+   img {
+
+      width: 70%;
+   }
+}

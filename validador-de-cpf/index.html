@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="preview/src/css/app.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="preview/preview/src/assets/file.png" type="image/x-icon">
+	<title>Validador de CPF</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<h1>INSIRA O CPF:</h1>
+		<hr>
+		<fieldset class="input-block">
+			<legend>Digite apenas numeros*</legend>
+			<input id="input-display" title="Insira o CPF" type="text" inputmode="tel" maxlength="14">
+			<button id="validation-button" class="validation-button" title="Clique para validar">Validar</button>
+		</fieldset>
+
+		<div id="isvalid">
+			<span title="O seu resultado irá aparecer aqui!">O seu resultado irá aparecer aqui!</span>
+		</div>
+
+		<div id="history-header">
+			<h2 id="history__title">Historico:</h2>
+			<button class="clean-history" title="Clique para limpar o historico">Limpar Historico</button>
+		</div>
+		<ul id="history">
+
+		</ul>
+
+	</div>
+
+	<script type="module" src="preview/src/js/app.js"></script>
+</body>
+
+</html>

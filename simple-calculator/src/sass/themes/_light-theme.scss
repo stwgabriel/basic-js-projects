@@ -1,0 +1,39 @@
+.theme--light {
+
+   background: #fff;
+
+   #app {
+
+      background: #fff;
+
+      color: #000;
+
+      .keypad {
+
+         background: #f9f9f9;
+
+         .key {
+
+            background: #f2f1f1;
+            box-shadow: 0 0 5px #f7f6f633;
+
+            color: #000;
+         }
+
+         .special-character {
+
+            color: #6A58A2;
+         }
+      }
+   }
+
+   .theme-switch {
+
+      background: #d5d5d5;
+
+      .circle {
+
+        transform: translate(185%, -50%);
+      }
+   }
+}

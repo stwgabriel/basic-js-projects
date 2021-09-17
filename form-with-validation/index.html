@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="src/css/app.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="src/assets/icon.png" type="image/x-icon">
+	<title>Sign up form</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<form id="signup-form" action="#">
+			<h1 class='noselect'>Sign up</h1>
+			<div class="input-block">
+				<input required type="text" id="name-field" class="name" autocomplete="off">
+				<label for="name">
+					<span class='noselect'>Name:</span>
+				</label>
+			</div>
+
+			<div class="input-block">
+				<input required type="text" id="username-field" class="username" autocomplete="username">
+				<label for="username">
+					<span class='noselect'>Username:</span>
+				</label>
+			</div>
+
+			<div class="input-block">
+				<input required type="text" inputmode="tel" id="cpf-field" class="usercpf" autocomplete="off"
+					maxlength="14">
+				<label for="cpf-field">
+					<span class='noselect'>CPF:</span>
+				</label>
+			</div>
+
+			<div class="input-block email--block">
+				<input required type="text" id="email-field" class="email" autocomplete="email">
+				<label for="email-field">
+					<span class='noselect'>Email:</span>
+				</label>
+			</div>
+
+			<div class="input-block email--block">
+				<input required type="text" id="email-confirm" class="email" autocomplete="email">
+				<label for="email-confirm">
+					<span class='noselect'>Confirm Email:</span>
+				</label>
+			</div>
+
+			<div class="input-block password--block">
+				<input required type="password" id="password-field" class="password" autocomplete="new-password">
+				<label for="password">
+					<span class='noselect'>Password:</span>
+				</label>
+			</div>
+
+			<div class="input-block password--block">
+				<input required type="password" id="password-confirm" class="password" autocomplete="new-password">
+				<label for="password-confirm">
+					<span class='noselect'>Confirm password:</span>
+				</label>
+			</div>
+
+			<button id="submit" type="submit">Send</button>
+		</form>
+
+		<script type="module" src="src/js/app.js"></script>
+	</div>
+</body>
+
+</html>

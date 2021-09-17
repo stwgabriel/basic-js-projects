@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="src/css/app.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="shortcut icon" href="src/assets/file.png" type="image/x-icon">
+   <title>Validador de CPF</title>
+</head>
+
+<body>
+   <div id="app">
+      <h2>Digite o CPF :</h2>
+      <span>Por favor digite apenas numeros*</span>
+      <div class="input-block">
+         <input maxlength="14" type="text" onpast="this.value = '' " inputmode="numeric" id="cpf-input" autofocus>
+         <button class="validate-button">Validar</button>
+      </div>
+      <div class="isvalid">
+         O seu resultado aparecerar aqui!
+      </div>
+
+   </div>
+   <script src="src/js/validador.js"></script>
+</body>
+
+</html>

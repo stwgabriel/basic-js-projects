@@ -1,0 +1,171 @@
+.keypad {
+
+   background   : #f3f2f2;
+   border-radius: 3rem;
+
+   display              : grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap                  : .5rem;
+
+   grid-template-areas:
+      'key key key key'
+      'key key key key'
+      'key key key key'
+      'key key key key'
+      'clear clear equal equal'
+   ;
+
+   height    : 65%;
+   min-height: clamp(35rem, 65vh, 50rem);
+   width     : 100%;
+
+   padding: clamp(1rem, 4vw, 6rem) 2rem;
+
+   .key {
+
+      background: #dfdede;
+      box-shadow: 0 0 5px #fff3;
+
+      color: #6A58A2;
+
+      border       : none;
+      border-radius: 1rem;
+      cursor       : pointer;
+
+      font-size: 2rem;
+
+      height: clamp(3rem, 16vw, 6rem);
+      width : clamp(3rem, 16vw, 6rem);
+
+      padding: 1rem;
+      margin : auto;
+
+      transition: scale, .2s;
+
+      &:active {
+
+         transform: scale(.95);
+      }
+
+      &:hover {
+
+         filter: brightness(.8);
+      }
+   }
+
+   .clear-key,
+   .equal-key {
+
+      width     : 90%;
+      margin-top: 2rem;
+   }
+
+   .delete-key,
+   .division-key,
+   .plus-key,
+   .minus-key,
+   .equal-key,
+   .multiple-key {
+
+      font-size: 0;
+
+      position: relative;
+
+      &::after {
+
+         content: '';
+
+         display: inline-block;
+         width  : 4rem;
+         height : 4rem;
+
+         position: absolute;
+         top     : 50%;
+         left    : 50%;
+
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   .clear-key {
+
+      grid-area: clear;
+   }
+
+   .equal-key {
+
+      grid-area: equal;
+
+      &::after {
+
+         background     : url(../assets/equal.svg) center no-repeat;
+         background-size: 70%;
+      }
+   }
+
+   .delete-key {
+
+      &::after {
+
+         background     : url(../assets/delete.svg) center no-repeat;
+         background-size: 70%;
+      }
+   }
+
+   .multiple-key {
+
+      &::after {
+
+         background     : url(../assets/multiple.svg) center no-repeat;
+         background-size: 60%;
+      }
+   }
+
+   .division-key {
+
+      &::after {
+
+         background     : url(../assets/division.svg) center no-repeat;
+         background-size: 70%;
+      }
+   }
+
+   .plus-key {
+
+      &::after {
+
+         background     : url(../assets/plus.svg) center no-repeat;
+         background-size: 70%;
+      }
+   }
+
+   .minus-key {
+
+      &::after {
+
+         background     : url(../assets/minus.svg) center no-repeat;
+         background-size: 70%;
+      }
+   }
+}
+
+@media (max-width:550px) {
+
+   .keypad {
+
+      padding: 4rem clamp(2rem, 10vw, 8rem);
+
+      .key {
+
+         &:hover {
+
+            filter: inherit;
+         }
+
+         &:active {
+
+            filter: brightness(.8);
+         }
+      }
+   }
+}

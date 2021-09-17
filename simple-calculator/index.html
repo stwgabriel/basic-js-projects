@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--  -->
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="src/css/app.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+   <!--  -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--  -->
+   <link rel="shortcut icon" href="src/assets/calculator.png" type="image/x-icon">
+   <meta name="description" content="a simple calculator built using javascript.">
+   <title>simple calculator</title>
+</head>
+
+<body>
+   <div id="app">
+
+      <div class="theme-switch" onclick="changeTheme()">
+         <div class="circle"></div>
+         <div class="dark icon">
+            <img src="src/assets/moon.svg" alt="moon">
+         </div>
+         <div class="light icon">
+            <img src="src/assets/sun.svg" alt="sun">
+         </div>
+      </div>
+
+      <div class="display">
+         <input class="main-display" readonly type="text">
+         <input class="secondary-display" readonly type="text">
+      </div>
+
+      <div class="keypad">
+
+         <button class="key num-key"> 7 </button>
+         <button class="key num-key"> 8 </button>
+         <button class="key num-key"> 9 </button>
+         <button class="key num-key special-character division-key"> / </button>
+         <button class="key num-key"> 4 </button>
+         <button class="key num-key"> 5 </button>
+         <button class="key num-key"> 6 </button>
+         <button class="key num-key special-character plus-key"> + </button>
+         <button class="key num-key"> 1 </button>
+         <button class="key num-key"> 2 </button>
+         <button class="key num-key"> 3 </button>
+         <button class="key num-key special-character minus-key"> - </button>
+         <button class="key num-key"> . </button>
+         <button class="key num-key"> 0 </button>
+         <button class="key special-character clear-key"> Clear </button>
+         <button class="key num-key special-character multiple-key"> * </button>
+         <button class="key special-character delete-key"> Del </button>
+         <button class="key special-character equal-key"> = </button>
+
+      </div>
+   </div>
+
+   <script type="module" src="src/js/app.js"></script>
+   <script src="src/js/themeSwitch.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+$fieldActive   :#6A58A2;
+$invalid-color : #ec5151;
+$valid-color   :#2ed85e;
+
+
+#signup-form {
+
+	background   : #fff;
+	box-shadow   : 0 0 25px #0002;
+	border-radius: 1rem;
+	color: #000a;
+
+	display        : flex;
+	flex-direction : column;
+	align-items    : center;
+	justify-content: center;
+
+	width  : min(70rem, 95%);
+	padding: 6rem clamp(1rem, 6vw, 5rem) 4rem;
+	margin : 4rem 0;
+
+	h1 {
+
+		color: $fieldActive;
+		font-size: 2.8rem;
+		margin-bottom: 2rem;
+	}
+
+	.input-block {
+
+		position: relative;
+
+		width: 100%;
+
+		margin: 1.5rem 0;
+
+		overflow: hidden;
+
+		&.--valid {
+
+			label {
+
+				span {
+
+					color: $valid-color;
+				}
+
+				&::after {
+
+					content: '';
+
+					border-bottom: solid .25rem $valid-color;
+				}
+			}
+		}
+
+		&.--invalid {
+
+			label {
+
+				span {
+
+					color: $invalid-color;
+				}
+
+				&::after {
+
+					content: '';
+
+					border-bottom: solid .25rem $invalid-color;
+				}
+			}
+
+		}
+
+		&.--too-short {
+
+			label {
+
+				&::before {
+
+					content: 'Too Short *';
+					color  : $invalid-color;
+
+					display: block;
+
+					position   : absolute;
+					top        : 1rem;
+					right      : 1rem;
+					font-size  : 1.4rem;
+					font-weight: 700;
+
+					animation: appear .3s backwards;
+				}
+			}
+		}
+
+		&.--empty {
+
+			label {
+
+				border-bottom: solid .25rem $invalid-color;
+
+				span {
+
+					color: $invalid-color;
+				}
+
+				&::after {
+
+					content: '';
+
+					border-bottom: solid .25rem $invalid-color;
+				}
+
+
+			}
+
+			&::before {
+
+				content: 'Fill in this field*';
+
+				color      : $invalid-color;
+				font-size  : 1.3rem;
+				font-weight: 700;
+
+				position: absolute;
+				right   : .2rem;
+				bottom  : 1rem;
+
+				animation: appear .3s backwards;
+			}
+		}
+
+		&.--subimt-alert {
+
+			position: relative;
+			overflow: visible;
+
+			&::after {
+
+				content: 'Please insert a valid value';
+
+				animation: appear .3s backwards;
+
+				background   : #dfd6fa;
+				border-radius: 1rem;
+				border       : solid 1px #0002;
+				box-shadow   : 0 0 10px #0001;
+
+				font-size  : 1.3rem;
+				font-weight: 700;
+
+				position: absolute;
+				bottom  : -4.7rem;
+				left    : 50%;
+
+				transform: translateX(-50%);
+
+				padding: 1rem;
+				z-index: 100;
+			}
+
+			&::before {
+
+				content: '';
+
+				animation: appear .3s backwards;
+
+				border-top   : 0px solid transparent;
+				border-left  : 10px solid transparent;
+				border-right : 10px solid transparent;
+				border-bottom: 10px solid #dfd6fa;
+				display      : block;
+
+				position: absolute;
+				bottom  : -1.2rem;
+				left    : 50%;
+
+				transform: translateX(-50%);
+
+				z-index: 110;
+
+				height: 0;
+				width : 0;
+			}
+		}
+
+		&.email--block.--unmatch-alert {
+
+			position: relative;
+			overflow: visible;
+
+			&::after {
+
+				content: "E-mails don't match";
+
+				animation: appear .3s backwards;
+
+				background   : #dfd6fa;
+				border-radius: 1rem;
+				border       : solid 1px #0002;
+				box-shadow   : 0 0 10px #0001;
+
+				font-size  : 1.3rem;
+				font-weight: 700;
+
+				position: absolute;
+				bottom  : -4.7rem;
+				left    : 50%;
+
+				transform: translateX(-50%);
+
+				width: fit-content;
+
+				padding: 1rem;
+				z-index: 100;
+			}
+
+			&::before {
+
+				content: '';
+
+				animation: appear .3s backwards;
+
+				border-top   : 0px solid transparent;
+				border-left  : 10px solid transparent;
+				border-right : 10px solid transparent;
+				border-bottom: 10px solid #dfd6fa;
+				display      : block;
+
+				position: absolute;
+				bottom  : -1.2rem;
+				left    : 50%;
+
+				transform: translateX(-50%);
+
+				z-index: 110;
+
+				height: 0;
+				width : 0;
+			}
+		}
+		&.password--block.--unmatch-alert {
+
+			position: relative;
+			overflow: visible;
+
+			&::after {
+
+				content: "Passwords don't match";
+
+				animation: appear .3s backwards;
+
+				background   : #dfd6fa;
+				border-radius: 1rem;
+				border       : solid 1px #0002;
+				box-shadow   : 0 0 10px #0001;
+
+				font-size  : 1.3rem;
+				font-weight: 700;
+
+				position: absolute;
+				bottom  : -4.7rem;
+				left    : 50%;
+
+				transform: translateX(-50%);
+
+				width: fit-content;
+
+				padding: 1rem;
+				z-index: 100;
+			}
+
+			&::before {
+
+				content: '';
+
+				animation: appear .3s backwards;
+
+				border-top   : 0px solid transparent;
+				border-left  : 10px solid transparent;
+				border-right : 10px solid transparent;
+				border-bottom: 10px solid #dfd6fa;
+				display      : block;
+
+				position: absolute;
+				bottom  : -1.2rem;
+				left    : 50%;
+
+				transform: translateX(-50%);
+
+				z-index: 110;
+
+				height: 0;
+				width : 0;
+			}
+		}
+	}
+
+	input {
+
+		border   : none;
+		font-size: 2rem;
+		outline  : none;
+
+		width: 100%;
+
+		padding: 2.8rem 0 .5rem;
+	}
+
+	label {
+
+		border-bottom: solid .25rem #000a;
+		height       : 100%;
+		width        : 100%;
+
+		pointer-events: none;
+
+		position: absolute;
+		left    : 0;
+		top     : 0;
+
+		&::after {
+
+			content: '';
+
+			border-bottom: solid .25rem $fieldActive;
+
+			display: block;
+
+			height: 100%;
+			width : 100%;
+
+			position : absolute;
+			top      : 0;
+			left     : 0;
+			transform: translateX(-100%);
+
+			transition: transform .3s ease-in;
+		}
+
+		span {
+
+			display: block;
+
+			font-size  : 1.7rem;
+			font-weight: 600;
+
+			height: 100%;
+			width : 100%;
+
+			transform: translateY(3rem);
+
+			transition: transform, font-size, .3s ease-out;
+		}
+	}
+
+	input:focus+label span,
+	input:valid+label span,
+	input:focus+label::after,
+	input:valid+label::after {
+
+		transform: translateY(0);
+		transform: translateX(0);
+	}
+
+	input:focus+label span,
+	input:valid+label span {
+
+		color    : $fieldActive;
+		font-size: 1.3rem;
+	}
+
+	button#submit {
+
+		background: $fieldActive;
+		border: none;
+		border-radius: .7rem;
+		color: #fff;
+		cursor: pointer;
+		font-size: 1.8rem;
+		font-weight: 500;
+
+		align-self: flex-start;
+
+		width: max-content;
+
+		padding: 1rem 4rem;
+		margin-top: 2rem;
+
+		transition: filter .3s;
+
+		&:hover {
+
+			filter: brightness(.78);
+		}
+	}
+}

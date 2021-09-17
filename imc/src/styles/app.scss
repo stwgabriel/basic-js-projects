@@ -1,0 +1,48 @@
+//
+:root {
+  --primary-color       : #116072;
+  --primary-color-darker: #0a3f49;
+  --white               : #fff;
+  --title-darker        : #222;
+
+  font-family: 'Inter', sans-serif;
+  font-size  : 62.5%;
+
+  background: #F8F9FE;
+
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  outline   : 0;
+  padding   : 0;
+  margin    : 0;
+}
+
+body {
+
+  min-height: 60rem;
+  height    : 100vh;
+
+  padding: 0;
+
+  font-size  : 2rem;
+  line-height: 3rem;
+}
+
+main {
+
+  min-height: 60rem;
+  height    : 90vh;
+  width     : min(100vw, 192rem);
+
+  margin: 0 auto;
+}
+
+@import './header';
+@import './calculator';
+@import './resultData';
+@import './resultOverlay';
+@import './responsive/responsive';
+@import './animations';

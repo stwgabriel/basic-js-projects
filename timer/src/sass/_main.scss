@@ -1,0 +1,69 @@
+// 
+
+:root {
+
+   font-size: 62.5%;
+}
+
+* {
+
+   box-sizing: border-box;
+   margin    : 0;
+   padding   : 0;
+}
+
+body {
+
+   background: linear-gradient(-225deg, #3ec5b3, #6f50ce);
+   background-size: 150%;
+
+   display        : flex;
+   align-items    : center;
+   justify-content: center;
+
+   min-height: 100vh;
+   position: relative;
+   animation : change 5s ease-in-out infinite;
+}
+
+@keyframes appear {
+
+   from {
+
+      opacity  : 0;
+      transform: scale(.90);
+   }
+
+   to {
+
+      opacity  : 1;
+      transform: scale(1);
+   }
+}
+
+@keyframes change {
+
+   0% {
+
+      background-position: 0%, 50%;
+   }
+
+   50% {
+
+      background-position: 100%, 50%;
+   }
+
+   100% {
+
+      background-position: 0%, 50%;
+   }
+
+}
+
+@media only screen and (min-width:1400) {
+
+   :root {
+
+      font-size: 75%;
+   }
+}

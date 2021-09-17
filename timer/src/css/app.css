@@ -1,0 +1,192 @@
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(-225deg, #3ec5b3, #6f50ce);
+  background-size: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  animation: change 5s ease-in-out infinite;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes change {
+  0% {
+    background-position: 0%, 50%;
+  }
+  50% {
+    background-position: 100%, 50%;
+  }
+  100% {
+    background-position: 0%, 50%;
+  }
+}
+@media only screen and (min-width: 1400) {
+  :root {
+    font-size: 75%;
+  }
+}
+#timer-box {
+  background-color: #f8f8f8;
+  border-radius: 1rem;
+  box-shadow: 0 0 50px #0002;
+  display: grid;
+  place-items: center;
+  min-width: 26rem;
+  height: clamp(50rem, 90vh, 60rem);
+  width: min(90%, 50rem);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+#timer-box section.timer-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.3rem #6a58a2;
+  border-radius: 100%;
+  min-height: 23rem;
+  height: clamp(10rem, 80vw, 35rem);
+  min-width: 23rem;
+  width: clamp(10rem, 80vw, 35rem);
+  padding: 0.5rem;
+}
+#timer-box section.timer-display .timer-circle-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+#timer-box section.timer-display .timer-box {
+  border-radius: 100%;
+  color: #6a58a2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  place-items: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: clamp(3rem, 12vw, 5.5rem);
+  letter-spacing: -1rem;
+  min-height: clamp(10rem, 80vw, 35rem);
+  max-width: clamp(10rem, 80vw, 35rem);
+}
+#timer-box section.timer-display .timer-box input {
+  background: transparent;
+  border: 0;
+  color: unset;
+  font-family: unset;
+  font-size: unset;
+  font-weight: 500;
+  min-width: 3ch;
+  width: clamp(2rem, 2vw, 3rem);
+  padding: 0;
+  margin: 0;
+  margin: 0 0.5rem;
+  outline: none;
+  text-align: center;
+}
+#timer-box section.timer-display .timer-box input:hover, #timer-box section.timer-display .timer-box input:active {
+  background: #0001;
+  box-shadow: inset 0 0 5px #0003;
+  border: solid 0.2rem #6a58a2;
+}
+#timer-box section.timer-display .timer-box input::placeholder {
+  color: unset;
+}
+#timer-box section.timer-display .timer-box input::-webkit-outer-spin-button, #timer-box section.timer-display .timer-box input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+  -moz-appearance: textfield;
+}
+#timer-box section.timer-display .timer-box input:first-of-type {
+  margin-left: 0;
+}
+#timer-box section.timer-display .timer-box input:last-of-type {
+  margin-right: 0;
+}
+#timer-box section.timer-display .timer-box span {
+  font-size: 3rem;
+  letter-spacing: -0.5rem;
+}
+#timer-box section.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.timer-button {
+  background: transparent;
+  border: solid 0.3rem #6a58a2;
+  box-shadow: 0 0 5px #0002;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 5rem;
+  width: 5rem;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  margin: 0 1rem;
+  animation-name: appear;
+  animation-duration: 0.4s;
+  animation-fill-mode: backwards;
+}
+.timer-button img {
+  max-width: 90%;
+}
+
+#start-button img {
+  width: 70%;
+  margin-right: -15%;
+}
+
+#pause-button img {
+  width: 70%;
+}
+
+#resume-button img {
+  margin-right: -15%;
+}
+
+#stop-button img {
+  width: 70%;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: auto;
+}
+
+.disable {
+  filter: grayscale(1);
+}
+
+.active {
+  filter: grayscale(0);
+}
+
+/*# sourceMappingURL=app.css.map */

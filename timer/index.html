@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="src/css/app.css">
+
+   <!--  -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+   <!--  -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--  -->
+   <link rel="shortcut icon" href="src/assets/timer.png" type="image/x-icon">
+   <meta name="description" content="simple timer with javascript">
+   <title>Simple Timer</title>
+</head>
+
+<body>
+   <div id="timer-box">
+
+      <section class="timer-display">
+         <div class="timer-circle-line">
+            <div class="timer-box">
+               <input title="Hours" min="0" max="999" placeholder="00" class="hours" type="number">
+               <span>:</span>
+               <input title="Minutes" min="0" max="60"  placeholder="00" class="minutes" type="number">
+               <span>:</span>
+               <input title="Seconds" min="0" max="60" placeholder="00" class="seconds" type="number">
+            </div>
+         </div>
+      </section>
+
+      <section class="options">
+
+         <button title="Start Timer" id="start-button" class="timer-button" onclick="startTime()">
+            <img src="src/assets/play.svg" alt="play">
+         </button>
+         <button title="Pause Timer" id="pause-button" class="timer-button hidden" onclick="pauseTime()">
+           <img src="src/assets/pause.svg" alt="pause">
+         </button>
+         <button title="Resume Timer" id="resume-button" class="timer-button hidden" onclick="resumeTime()">
+            <img src="src/assets/resume.svg" alt="">
+         </button>
+         <button title="Stop Timer" id="stop-button" class="timer-button hidden" onclick="stopTime()">
+           <img src="src/assets/stop.svg" alt="">
+         </button>
+
+      </section>
+
+   </div>
+   <script src="src/js/timer.js"></script>
+</body>
+
+</html>

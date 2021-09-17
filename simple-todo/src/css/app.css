@@ -1,0 +1,210 @@
+:root {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(-225deg, #3ec5b3, #6f50ce);
+  background-size: 150%;
+  font-weight: 600;
+  position: relative;
+  animation: change 5s ease-in-out infinite;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.task-app {
+  background: #eee;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min(50rem, 90vw);
+  padding: 2rem;
+  margin: 10rem 0;
+  animation: appear 0.5s 0.2s backwards;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0%, 50%;
+  }
+  50% {
+    background-position: 100%, 50%;
+  }
+  100% {
+    background-position: 0%, 50%;
+  }
+}
+@keyframes down {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.task-header {
+  width: 100%;
+}
+.task-header h1 {
+  color: #6A58A2;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+.task-header hr {
+  background-color: #0001;
+  border-radius: 2rem;
+  border: none;
+  height: 0.2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.task-header .input-container {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px #0001;
+  display: flex;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+.task-header input {
+  border: none;
+  border-bottom: solid 0.2rem #6A58A2aa;
+  border-radius: 0.5rem;
+  color: #6A58A2;
+  outline-color: #6A58A255;
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  font-weight: 700;
+  flex: 1;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  min-width: 0;
+}
+.task-header input:active, .task-header input:hover, .task-header input:focus {
+  background: #0001;
+}
+
+.task-box {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px #0001;
+  color: #6A58A2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  animation: down 0.3s backwards;
+  transition: background, color, 0.3s;
+}
+.task-box .task {
+  font-size: max(16px, 1.8rem);
+  font-weight: 600;
+  flex: 1;
+  margin-right: 0.5rem;
+}
+.task-box.checked {
+  background: #d8d7d7;
+}
+.task-box.checked .task {
+  color: #000;
+  text-decoration: line-through;
+}
+.task-box.checked button.check-uncheck-button::after {
+  background-color: #6A58A2;
+}
+.task-box.unchecked button.check-uncheck-button::after {
+  background-color: #858585ee;
+}
+
+#tasks, #checked-tasks {
+  width: 100%;
+}
+#tasks li, #checked-tasks li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #0000;
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 4rem;
+  width: 4rem;
+  transition: background, box-shadow, 0.3s;
+}
+button:hover {
+  background-color: #6A58A240 !important;
+}
+
+button.delete-task-button {
+  margin-left: 0.2rem;
+}
+button.delete-task-button::after {
+  content: " ";
+  position: relative;
+  top: 0;
+  left: 0;
+  background: url(https://stwgabriel.space/simple-todo/src/assets/trash.svg) no-repeat center;
+  background-size: 55%;
+  height: 90%;
+  width: 90%;
+}
+
+button.add-task-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button.add-task-button img {
+  width: 75%;
+}
+
+button.check-uncheck-button::after {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  background: url(https://stwgabriel.space/simple-todo/src/assets/check.svg) no-repeat center;
+  background-size: 60%;
+  border-radius: 0.5rem;
+  width: 60%;
+  height: 60%;
+  transition: background 0.4s;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,90 @@
+//
+.resultScreen {
+
+   background     : #F8F9FE;
+   border-radius  : 3rem;
+   display        : none;
+   flex-direction : column;
+   align-items    : center;
+   justify-content: space-between;
+
+   position: fixed;
+   top     : 0;
+   right   : 0;
+   bottom  : 0;
+   left    : 0;
+
+   padding-top: 3rem;
+
+   header {
+
+      color     : var(--primary-color-darker);
+      font-size : 1.3rem;
+      text-align: center;
+
+      padding: 2rem 0rem;
+   }
+
+   .resultBoxMain {
+
+      overflow-y: scroll;
+
+      width : 100%;
+      height: 100%;
+
+      padding: 3rem;
+
+      .resultBox {
+
+         display        : flex;
+         flex-direction : column;
+         align-items    : center;
+         justify-content: space-around;
+
+         min-height: 50rem;
+         height    : 90%;
+         width     : 100%;
+
+         .resultBubble {
+
+            margin: auto;
+            width : 100%;
+         }
+
+         .imcData {
+
+            display        : flex;
+            flex-direction : column;
+            align-items    : center;
+            justify-content: space-between;
+
+            flex: 1;
+
+            min-height: 100%;
+            width     : 100%;
+
+            @import 'responsive/imcData';
+         }
+
+      }
+   }
+
+   .resultScreenClose {
+
+      background: transparent;
+      border    : none;
+
+      width : 2.5rem;
+      height: 2.5rem;
+
+      position: absolute;
+
+      right: 2rem;
+      top  : 2rem;
+   }
+}
+
+.onScreen {
+
+   display: flex;
+}

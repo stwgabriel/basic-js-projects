@@ -1,0 +1,164 @@
+////
+#calculator {
+
+   display       : flex;
+   flex-direction: column;
+   align-items   : center;
+
+   height: 100%;
+   width : 100%;
+
+   padding      : clamp(1rem, 5vw, 5rem);
+   padding-right: 0;
+   padding-left : 0;
+
+   .calculatorContent {
+
+      display        : flex;
+      flex-direction : column;
+      align-items    : center;
+      justify-content: space-around;
+
+      width: 100%;
+   }
+
+   .fields {
+
+      width: 100%;
+
+      .calculatoirField {
+
+         background   : #fff;
+         border-radius: 2rem;
+         box-shadow   : 0 0 5rem #0003;
+
+         display       : flex;
+         flex-direction: column;
+
+         width    : 90%;
+         max-width: 50rem;
+
+         margin : 3rem auto;
+         padding: 3rem;
+
+         .box {
+
+            display        : flex;
+            flex-direction : column;
+            align-items    : center;
+            justify-content: space-around;
+
+            height: 100%;
+
+            margin: auto;
+
+
+            p {
+
+               color      : var(--primary-color);
+               font-size  : 2.5 rem;
+               font-weight: 600;
+
+            }
+
+            span {
+
+               font-size: 1.8rem !important;
+               font-size: var(--primary-color);
+
+
+               opacity: .5;
+            }
+
+            input {
+
+               border: none;
+               color : var(--primary-color);
+
+               font-size  : 8rem;
+               font-weight: 700;
+
+               text-align: center;
+
+               width: 100%;
+
+               &::placeholder {
+
+                  color      : var(--primary-color);
+                  text-shadow: 0 0 1rem #0003;
+               }
+            }
+
+            .buttonBox {
+
+               display: flex;
+
+               button {
+
+                  background   : var(--white);
+                  border-radius: 100%;
+                  border       : solid .2rem #11566620;
+
+                  cursor: pointer;
+
+                  display        : flex;
+                  align-items    : center;
+                  justify-content: center;
+
+                  height: 4rem;
+                  width : 4rem;
+
+                  margin: 0 .5rem;
+
+
+                  img {
+
+                     width     : 50%;
+                     transition: width .4s;
+                  }
+
+                  &:hover {
+
+                     img {
+
+                        width: 40%;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .buttomContainer {
+
+      width          : 100%;
+      display        : flex;
+      justify-content: center;
+
+      #calculatorButton {
+
+         background   : var(--primary-color);
+         border       : none;
+         border-radius: 2rem;
+         box-shadow   : 0 0 5rem #0005;
+
+         cursor: pointer;
+
+         color    : var(--white);
+         font-size: 2rem;
+
+         width    : 90%;
+         max-width: 50rem;
+
+         padding: 2rem 0;
+
+         transition: background .4s;
+
+         &:hover {
+
+            background: var(--primary-color-darker);
+         }
+      }
+   }
+}
