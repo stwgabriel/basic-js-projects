@@ -1,0 +1,18 @@
+#app {
+
+	header {
+
+		color: #6A58A2;
+		font-size: clamp(1rem, 5vw, 1.4rem);
+		text-align: center;
+
+		display    : grid;
+		place-items: center;
+
+		height     : 10rem;
+		width      : 100%;
+
+		padding: 1rem;
+		margin-bottom: 5rem;
+	}
+}

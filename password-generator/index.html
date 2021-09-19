@@ -1,26 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--  -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<!--  -->
 	<title>Password Generator</title>
 </head>
+
 <body>
-	<header>
-		<h1>Password Generator</h1>
-	</header>
-	<div class="main">
-		<div class="password-block">
-			<input type="text" class="password-box">
-			<div class="copy-button"></div>
-			<div class="generate-button"></div>
-			<div class="password-strength"></div>
-		</div>
-		<div class="settings">
-			<div class="length-control"></div>
-			<div class="strength-options"></div>
-		</div>
+	<div id="app">
+
+		<header>
+			<h1>Password Generator</h1>
+		</header>
+
+		<main id="main">
+
+			<div id="password-block">
+				<div class="block-row">
+					<div class="input-wrapper">
+						<input type="text" readonly id="password-display" class="password-display">
+					</div>
+					<div class="copy-button copy-pass">
+						<img src="src/assets/copy.svg" alt="copy" class="copy-pass">
+					</div>
+					<div class="regenerate-button regenerate">
+						<img src="src/assets/reload.svg" class="regenerate" alt="reload password">
+					</div>
+				</div>
+				<div class="password-strength">
+					<div class="strength"></div>
+				</div>
+			</div>
+
+			<div id="options">
+
+				<div class="length-control">
+					<div class="input-wrapper">
+						<input id="password-length" min="5" max="50" class="password-length" type="number" value="15">
+					</div>
+					<div class="alert-overlay"></div>
+				</div>
+
+				<hr>
+
+				<div class="strength-options">
+
+					<div class="input-block">
+						<input type="checkbox" id="lowercase" class="lowercase">
+						<label for="lowercase">Lowercase	</label>
+					</div>
+
+					<div class="input-block">
+						<input type="checkbox" id="uppercase" class="uppercase">
+						<label for="uppercase">Uppercase </label>
+					</div>
+
+					<div class="input-block">
+						<input type="checkbox" id="numbers" class="numbers">
+						<label for="numbers">Numbers</label>
+					</div>
+
+					<div class="input-block">
+						<input type="checkbox" id="symbols" class="symbols">
+						<label for="symbols">Symbols</label>
+					</div>
+
+				</div>
+			</div>
+
+		</main>
+
 	</div>
+
 	<script src="public/js/bundle.js"></script>
 </body>
+
 </html>

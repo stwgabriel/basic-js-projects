@@ -1,0 +1,510 @@
+@mixin popover ($message:'', $aftp, $bftp, $left:50%, $afzi:200, $bfzi:205) {
+
+	&::after {
+
+		content: $message;
+
+		background   : #fff;
+		border       : solid .2rem #6A58A230;
+		box-shadow   : 0 0 20px #0001;
+		border-radius: .6rem;
+		color        : #6A58A2;
+		text-shadow  : 1px 1px 5px #0001;
+		font-weight  : 600;
+		font-size    : max(14px, 1.4rem);
+
+		display: flex;
+
+		position : absolute;
+		top      : $aftp;
+		left     : $left;
+		transform: translateX(-50%);
+
+		width  : max-content;
+		padding: 1.3rem;
+
+		z-index: $afzi;
+	}
+
+	&::before {
+
+		content: ' ';
+
+		background         : url('/src/assets/arrow.svg') center no-repeat;
+		background-size    : 100%;
+		background-position: center -2px;
+		border-radius      : .6rem;
+		filter             : drop-shadow(0 0 20px #0001);
+		font-size          : max(14px, 1.4rem);
+		font-weight        : 600;
+
+		display: flex;
+
+		position : absolute;
+		top      : $bftp;
+		left     : 50%;
+		transform: translateX(-50%);
+
+		height: 2rem;
+		width : 2rem;
+
+		padding: 1.3rem;
+
+		z-index: $bfzi;
+	}
+}
+
+#app {
+
+	display       : flex;
+	flex-direction: column;
+	align-items   : center;
+
+	height: 100vh;
+
+	#main {
+
+		width: min(90%, 70rem);
+
+		#password-block {
+
+			background   : #fff;
+			border-radius: .5rem;
+			border       : solid .2rem #6A58A230;
+			box-shadow   : 0 0 2.4rem #0001;
+
+			display       : flex;
+			flex-direction: column;
+
+			width: 100%;
+
+			margin-bottom: 5rem;
+
+			.block-row {
+
+				display        : flex;
+				justify-content: space-between;
+
+				flex: 1;
+
+				padding : 1.5rem 2rem 1rem;
+				position: relative;
+
+				.input-wrapper {
+
+					flex    : 1;
+					position: relative;
+
+					&::after {
+
+						content: '';
+						display: flex;
+
+						background: linear-gradient(to right, #fff0, #fffc, #fff);
+
+						height: 100%;
+						width : 4rem;
+
+						position: absolute;
+						right   : 0;
+						top     : 0;
+						bottom  : 0;
+					}
+				}
+
+				input {
+
+					border     : none;
+					color      : #6A58A2;
+					font-size  : 2.5rem;
+					font-weight: 600;
+					outline    : none;
+
+					padding: 1rem;
+					width  : 100%;
+				}
+
+				.copy-button,
+				.regenerate-button {
+
+					border-radius: .5rem;
+
+					display        : flex;
+					align-items    : center;
+					justify-content: center;
+
+					height: 5rem;
+					width : 4rem;
+
+					margin: auto .5rem;
+
+					pointer-events: fill;
+
+					img {
+
+						width: 70%;
+					}
+
+					&:hover {
+
+						background: #6A58A21a;
+						box-shadow: inset .2rem .2rem .5rem #0001;
+					}
+				}
+
+				.regenerate-button {
+
+					&:hover {
+
+						position: relative;
+						@include popover('Generate a new password', -140%, -50%, -90%)
+					}
+
+					&.--clicked {
+
+						img {
+							transform : rotate(360deg);
+							transition: transform .6s;
+						}
+					}
+				}
+
+				.copy-button {
+
+					img {
+
+						transition: transform .2s;
+					}
+
+					&:active {
+
+						img {
+
+							transform: scale(.7);
+						}
+					}
+
+					&:hover {
+
+						position: relative;
+						@include popover('Copy', -140%, -50%)
+					}
+
+					&.--copied {
+
+						position: relative;
+						@include popover('Copied!', -140%, -50%);
+
+						&::after {
+
+							display: flex !important;
+						}
+						&::before {
+
+							display: flex !important;
+						}
+					}
+				}
+			}
+
+			.password-strength {
+
+				background   : #6A58A230;
+				height       : max(6px, .6rem);
+				width        : 100%;
+				overflow     : hidden;
+				border-radius: 0 0 .3rem .3rem;
+
+				.strength {
+
+					border-radius: 1rem;
+					box-shadow: 0 0 2px #0003;
+					transition   : width .3s;
+					transform: translateX(-2%);
+				}
+
+				&.--weak {
+
+					.strength {
+
+						background: #df6661;
+
+						height: 100%;
+						width : 25%;
+					}
+				}
+
+				&.--fair {
+
+					.strength {
+
+						background: #efc20f;
+
+						height: 100%;
+						width : 45%;
+					}
+				}
+
+				&.--good {
+
+					.strength {
+
+						background: #00a878;
+
+						height: 100%;
+						width : 65%;
+					}
+				}
+
+				&.--excellent {
+
+					.strength {
+
+						background: #006b4d;
+
+						height: 100%;
+						width : 105%;
+					}
+				}
+			}
+		}
+
+		#options {
+
+			background   : #fff;
+			border       : solid .2rem #6A58A230;
+			border-radius: .6rem;
+			box-shadow   : 0 0 2.4rem #0001;
+
+			display       : flex;
+			flex-direction: column;
+			align-items   : center;
+
+			padding: 4rem 3rem;
+
+			hr {
+
+				background   : #6A58A230;
+				border       : none;
+				border-radius: 1rem;
+
+				width : 100%;
+				height: .2rem;
+
+				margin: 4rem 0;
+			}
+
+			.length-control {
+
+				&:hover {
+
+					position: relative;
+					@include popover('Set password length', -150%, -50%)
+				}
+
+				&.--maximum-alert {
+
+
+					.input-wrapper {
+
+						position: relative;
+
+						@include popover ('50 is the maximum value allowed', -150%, -50%, 90%, 250, 260);
+					}
+
+					.alert-overlay {
+
+						pointer-events: all;
+					}
+				}
+
+				&.--minimum-alert {
+
+
+					.input-wrapper {
+
+						position: relative;
+
+						@include popover ('Five is the minimum value allowed', -150%, -50%, 90%, 250, 260);
+					}
+
+					.alert-overlay {
+
+						pointer-events: all;
+					}
+				}
+
+				.alert-overlay {
+
+					background: transparent;
+					position  : absolute;
+					inset     : 0;
+					top       : 0;
+					bottom    : 0;
+					left      : 0;
+					right     : 0;
+
+					pointer-events: none;
+					z-index       : 200;
+				}
+			}
+
+			.password-length {
+
+				border       : solid .2rem #6A58A230;
+				border-radius: .6rem;
+				color        : #6A58A2;
+				font-size    : 1.8rem;
+				font-weight  : 600;
+
+				width  : fit-content;
+				padding: 1rem;
+			}
+
+			.strength-options {
+
+				display: flex;
+			}
+
+			label {
+
+				color      : #6A58A2;
+				font-size  : 1.7rem;
+				font-weight: 600;
+			}
+
+			input {
+
+				accent-color: #6A58A2;
+
+			}
+
+			input[type="checkbox"] {
+
+				accent-color: #6A58A2;
+				transform   : scale(1.4);
+				margin      : 0 .5rem 0 2rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 620px) {
+
+	#app {
+
+		#main {
+
+			#options {
+
+				flex-direction : row;
+				justify-content: space-evenly;
+
+				hr {
+
+					min-height: 6rem;
+					height    : 100%;
+					width     : .2rem;
+					margin    : 0;
+				}
+
+				input[type="checkbox"] {
+
+					transform: scale(1.5);
+					margin   : 1rem;
+				}
+
+				label {
+					font-size: 1.8rem;
+				}
+			}
+
+			.strength-options {
+
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+@media (max-width:490px) {
+
+	#app {
+
+		#main {
+
+			width: 95%;
+
+			#password-block {
+				.block-row {
+
+					padding: 1rem;
+
+					input {
+
+						font-size: 2.5rem;
+					}
+
+					.copy-button,
+					.regenerate-button {
+
+						&:hover {
+
+							&::after {
+								display: none;
+							}
+
+							&::before {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			#options {
+
+				justify-content: space-around;
+				padding        : 4rem 1.5rem;
+
+				hr {
+
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width:375px) {
+
+	#app {
+
+		#main {
+
+			#password-block {
+
+				.block-row {
+
+					input {
+
+						font-size: 2rem;
+						padding  : 1rem 0;
+					}
+
+					.copy-button,
+					.regenerate-button {
+
+						height: 3.7rem;
+						width : 2.7rem;
+					}
+				}
+			}
+
+			#options {
+
+				justify-content: space-between;
+			}
+		}
+	}
+}

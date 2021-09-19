@@ -4,4 +4,511 @@
   margin: 0;
 }
 
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+  background: #fefefe;
+}
+
+#app header {
+  color: #6A58A2;
+  font-size: clamp(1rem, 5vw, 1.4rem);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  height: 10rem;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 5rem;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+#app #main {
+  width: min(90%, 70rem);
+}
+#app #main #password-block {
+  background: #fff;
+  border-radius: 0.5rem;
+  border: solid 0.2rem #6A58A230;
+  box-shadow: 0 0 2.4rem #0001;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+#app #main #password-block .block-row {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 1.5rem 2rem 1rem;
+  position: relative;
+}
+#app #main #password-block .block-row .input-wrapper {
+  flex: 1;
+  position: relative;
+}
+#app #main #password-block .block-row .input-wrapper::after {
+  content: "";
+  display: flex;
+  background: linear-gradient(to right, #fff0, #fffc, #fff);
+  height: 100%;
+  width: 4rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#app #main #password-block .block-row input {
+  border: none;
+  color: #6A58A2;
+  font-size: 2.5rem;
+  font-weight: 600;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+}
+#app #main #password-block .block-row .copy-button,
+#app #main #password-block .block-row .regenerate-button {
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 4rem;
+  margin: auto 0.5rem;
+  pointer-events: fill;
+}
+#app #main #password-block .block-row .copy-button img,
+#app #main #password-block .block-row .regenerate-button img {
+  width: 70%;
+}
+#app #main #password-block .block-row .copy-button:hover,
+#app #main #password-block .block-row .regenerate-button:hover {
+  background: #6A58A21a;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #0001;
+}
+#app #main #password-block .block-row .regenerate-button:hover {
+  position: relative;
+}
+#app #main #password-block .block-row .regenerate-button:hover::after {
+  content: "Generate a new password";
+  background: #fff;
+  border: solid 0.2rem #6A58A230;
+  box-shadow: 0 0 20px #0001;
+  border-radius: 0.6rem;
+  color: #6A58A2;
+  text-shadow: 1px 1px 5px #0001;
+  font-weight: 600;
+  font-size: max(14px, 1.4rem);
+  display: flex;
+  position: absolute;
+  top: -140%;
+  left: -90%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 1.3rem;
+  z-index: 200;
+}
+#app #main #password-block .block-row .regenerate-button:hover::before {
+  content: " ";
+  background: url("/src/assets/arrow.svg") center no-repeat;
+  background-size: 100%;
+  background-position: center -2px;
+  border-radius: 0.6rem;
+  filter: drop-shadow(0 0 20px #0001);
+  font-size: max(14px, 1.4rem);
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2rem;
+  width: 2rem;
+  padding: 1.3rem;
+  z-index: 205;
+}
+#app #main #password-block .block-row .regenerate-button.--clicked img {
+  transform: rotate(360deg);
+  transition: transform 0.6s;
+}
+#app #main #password-block .block-row .copy-button img {
+  transition: transform 0.2s;
+}
+#app #main #password-block .block-row .copy-button:active img {
+  transform: scale(0.7);
+}
+#app #main #password-block .block-row .copy-button:hover {
+  position: relative;
+}
+#app #main #password-block .block-row .copy-button:hover::after {
+  content: "Copy";
+  background: #fff;
+  border: solid 0.2rem #6A58A230;
+  box-shadow: 0 0 20px #0001;
+  border-radius: 0.6rem;
+  color: #6A58A2;
+  text-shadow: 1px 1px 5px #0001;
+  font-weight: 600;
+  font-size: max(14px, 1.4rem);
+  display: flex;
+  position: absolute;
+  top: -140%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 1.3rem;
+  z-index: 200;
+}
+#app #main #password-block .block-row .copy-button:hover::before {
+  content: " ";
+  background: url("/src/assets/arrow.svg") center no-repeat;
+  background-size: 100%;
+  background-position: center -2px;
+  border-radius: 0.6rem;
+  filter: drop-shadow(0 0 20px #0001);
+  font-size: max(14px, 1.4rem);
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2rem;
+  width: 2rem;
+  padding: 1.3rem;
+  z-index: 205;
+}
+#app #main #password-block .block-row .copy-button.--copied {
+  position: relative;
+}
+#app #main #password-block .block-row .copy-button.--copied::after {
+  content: "Copied!";
+  background: #fff;
+  border: solid 0.2rem #6A58A230;
+  box-shadow: 0 0 20px #0001;
+  border-radius: 0.6rem;
+  color: #6A58A2;
+  text-shadow: 1px 1px 5px #0001;
+  font-weight: 600;
+  font-size: max(14px, 1.4rem);
+  display: flex;
+  position: absolute;
+  top: -140%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 1.3rem;
+  z-index: 200;
+}
+#app #main #password-block .block-row .copy-button.--copied::before {
+  content: " ";
+  background: url("/src/assets/arrow.svg") center no-repeat;
+  background-size: 100%;
+  background-position: center -2px;
+  border-radius: 0.6rem;
+  filter: drop-shadow(0 0 20px #0001);
+  font-size: max(14px, 1.4rem);
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2rem;
+  width: 2rem;
+  padding: 1.3rem;
+  z-index: 205;
+}
+#app #main #password-block .block-row .copy-button.--copied::after {
+  display: flex !important;
+}
+#app #main #password-block .block-row .copy-button.--copied::before {
+  display: flex !important;
+}
+#app #main #password-block .password-strength {
+  background: #6A58A230;
+  height: max(6px, .6rem);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+#app #main #password-block .password-strength .strength {
+  border-radius: 1rem;
+  box-shadow: 0 0 2px #0003;
+  transition: width 0.3s;
+  transform: translateX(-2%);
+}
+#app #main #password-block .password-strength.--weak .strength {
+  background: #df6661;
+  height: 100%;
+  width: 25%;
+}
+#app #main #password-block .password-strength.--fair .strength {
+  background: #efc20f;
+  height: 100%;
+  width: 45%;
+}
+#app #main #password-block .password-strength.--good .strength {
+  background: #00a878;
+  height: 100%;
+  width: 65%;
+}
+#app #main #password-block .password-strength.--excellent .strength {
+  background: #006b4d;
+  height: 100%;
+  width: 105%;
+}
+#app #main #options {
+  background: #fff;
+  border: solid 0.2rem #6A58A230;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 2.4rem #0001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 3rem;
+}
+#app #main #options hr {
+  background: #6A58A230;
+  border: none;
+  border-radius: 1rem;
+  width: 100%;
+  height: 0.2rem;
+  margin: 4rem 0;
+}
+#app #main #options .length-control:hover {
+  position: relative;
+}
+#app #main #options .length-control:hover::after {
+  content: "Set password length";
+  background: #fff;
+  border: solid 0.2rem #6A58A230;
+  box-shadow: 0 0 20px #0001;
+  border-radius: 0.6rem;
+  color: #6A58A2;
+  text-shadow: 1px 1px 5px #0001;
+  font-weight: 600;
+  font-size: max(14px, 1.4rem);
+  display: flex;
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 1.3rem;
+  z-index: 200;
+}
+#app #main #options .length-control:hover::before {
+  content: " ";
+  background: url("/src/assets/arrow.svg") center no-repeat;
+  background-size: 100%;
+  background-position: center -2px;
+  border-radius: 0.6rem;
+  filter: drop-shadow(0 0 20px #0001);
+  font-size: max(14px, 1.4rem);
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2rem;
+  width: 2rem;
+  padding: 1.3rem;
+  z-index: 205;
+}
+#app #main #options .length-control.--maximum-alert .input-wrapper {
+  position: relative;
+}
+#app #main #options .length-control.--maximum-alert .input-wrapper::after {
+  content: "50 is the maximum value allowed";
+  background: #fff;
+  border: solid 0.2rem #6A58A230;
+  box-shadow: 0 0 20px #0001;
+  border-radius: 0.6rem;
+  color: #6A58A2;
+  text-shadow: 1px 1px 5px #0001;
+  font-weight: 600;
+  font-size: max(14px, 1.4rem);
+  display: flex;
+  position: absolute;
+  top: -150%;
+  left: 90%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 1.3rem;
+  z-index: 250;
+}
+#app #main #options .length-control.--maximum-alert .input-wrapper::before {
+  content: " ";
+  background: url("/src/assets/arrow.svg") center no-repeat;
+  background-size: 100%;
+  background-position: center -2px;
+  border-radius: 0.6rem;
+  filter: drop-shadow(0 0 20px #0001);
+  font-size: max(14px, 1.4rem);
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2rem;
+  width: 2rem;
+  padding: 1.3rem;
+  z-index: 260;
+}
+#app #main #options .length-control.--maximum-alert .alert-overlay {
+  pointer-events: all;
+}
+#app #main #options .length-control.--minimum-alert .input-wrapper {
+  position: relative;
+}
+#app #main #options .length-control.--minimum-alert .input-wrapper::after {
+  content: "Five is the minimum value allowed";
+  background: #fff;
+  border: solid 0.2rem #6A58A230;
+  box-shadow: 0 0 20px #0001;
+  border-radius: 0.6rem;
+  color: #6A58A2;
+  text-shadow: 1px 1px 5px #0001;
+  font-weight: 600;
+  font-size: max(14px, 1.4rem);
+  display: flex;
+  position: absolute;
+  top: -150%;
+  left: 90%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 1.3rem;
+  z-index: 250;
+}
+#app #main #options .length-control.--minimum-alert .input-wrapper::before {
+  content: " ";
+  background: url("/src/assets/arrow.svg") center no-repeat;
+  background-size: 100%;
+  background-position: center -2px;
+  border-radius: 0.6rem;
+  filter: drop-shadow(0 0 20px #0001);
+  font-size: max(14px, 1.4rem);
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2rem;
+  width: 2rem;
+  padding: 1.3rem;
+  z-index: 260;
+}
+#app #main #options .length-control.--minimum-alert .alert-overlay {
+  pointer-events: all;
+}
+#app #main #options .length-control .alert-overlay {
+  background: transparent;
+  position: absolute;
+  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 200;
+}
+#app #main #options .password-length {
+  border: solid 0.2rem #6A58A230;
+  border-radius: 0.6rem;
+  color: #6A58A2;
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: fit-content;
+  padding: 1rem;
+}
+#app #main #options .strength-options {
+  display: flex;
+}
+#app #main #options label {
+  color: #6A58A2;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+#app #main #options input {
+  accent-color: #6A58A2;
+}
+#app #main #options input[type=checkbox] {
+  accent-color: #6A58A2;
+  transform: scale(1.4);
+  margin: 0 0.5rem 0 2rem;
+}
+
+@media (max-width: 620px) {
+  #app #main #options {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #app #main #options hr {
+    min-height: 6rem;
+    height: 100%;
+    width: 0.2rem;
+    margin: 0;
+  }
+  #app #main #options input[type=checkbox] {
+    transform: scale(1.5);
+    margin: 1rem;
+  }
+  #app #main #options label {
+    font-size: 1.8rem;
+  }
+  #app #main .strength-options {
+    flex-direction: column;
+  }
+}
+@media (max-width: 490px) {
+  #app #main {
+    width: 95%;
+  }
+  #app #main #password-block .block-row {
+    padding: 1rem;
+  }
+  #app #main #password-block .block-row input {
+    font-size: 2.5rem;
+  }
+  #app #main #password-block .block-row .copy-button:hover::after,
+#app #main #password-block .block-row .regenerate-button:hover::after {
+    display: none;
+  }
+  #app #main #password-block .block-row .copy-button:hover::before,
+#app #main #password-block .block-row .regenerate-button:hover::before {
+    display: none;
+  }
+  #app #main #options {
+    justify-content: space-around;
+    padding: 4rem 1.5rem;
+  }
+  #app #main #options hr {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  #app #main #password-block .block-row input {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+  #app #main #password-block .block-row .copy-button,
+#app #main #password-block .block-row .regenerate-button {
+    height: 3.7rem;
+    width: 2.7rem;
+  }
+  #app #main #options {
+    justify-content: space-between;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */
