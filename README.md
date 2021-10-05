@@ -7,7 +7,7 @@
 
 - [simple-todo](./simple-todo)
 - [password-generator](./password-generator)
-- [cpf-generator](./cpf-generator)
+- [cpf-generator](./cpf-generator)   [ File ]
 - [cpf-validator](./cpf-validator)
 - [simple-cpf-validator](./simple-cpf-validator)
 - [simple-calculator](./simple-calculator)
