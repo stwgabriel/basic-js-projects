@@ -3,13 +3,13 @@
 - [Links](#links)
 
 ## Preview
-|  ![Simple Calculator](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/calculator.png) [Simple Calculator](./simple-calculator) | ![CPF Validator](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/cpf-validator.png) [CPF Validator](./simple-todo) | ![Simple CPF Validator](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/simple-cpf-validator.png) [Simple CPF Validator](./simple-todo) |  
+|  ![Simple Calculator](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/calculator.png) [Simple Calculator](https://stwgabriel.space/basic-js-projects/simple-calculator) | ![CPF Validator](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/cpf-validator.png) [CPF Validator](https://stwgabriel.space/basic-js-projects/cpf-validator) | ![Simple CPF Validator](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/simple-cpf-validator.png) [Simple CPF Validator](https://stwgabriel.space/basic-js-projects/simple-cpf-validator) |  
 |---|---|---|
 
-| ![Form With Validation](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/val-form.png) [Form With Validation](./form-with-validation) | ![IMC](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/imc.png) [imc](./imc) | ![Password Generator](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/pass-gen.png) [Password Generator](./password-generator) | 
+| ![Form With Validation](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/val-form.png) [Form With Validation](https://stwgabriel.space/basic-js-projects/form-with-validation) | ![IMC](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/imc.png) [imc](https://stwgabriel.space/basic-js-projects/imc) | ![Password Generator](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/pass-gen.png) [Password Generator](https://stwgabriel.space/basic-js-projects/password-generator) | 
 |---|---|---|
 
-| ![Timer](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/timer.png) [Timer](./timer) | ![Simple Todo](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/password-gen.png) [Simple Todo](./simple-todo) |
+| ![Timer](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/timer.png) [Timer](https://stwgabriel.space/basic-js-projects/timer) | ![Simple Todo](https://github.com/stwgabriel/basic-js-projects/blob/main/.github/password-gen.png) [Simple Todo](https://stwgabriel.space/basic-js-projects/simple-todo) |
 |---|---|
 
 ## Links 
