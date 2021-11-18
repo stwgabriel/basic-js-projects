@@ -1,6 +1,6 @@
 # Simple Timer
 
-### [Live Preview](https://stwgabriel.space/basic-js-projects/simple-timer/)
+### [Live Preview](https://stwgabriel.github.io/basic-js-projects/simple-timer/)
 
 ## Descrição
 

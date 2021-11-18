@@ -1,6 +1,6 @@
 # validador de cpf 
 
-### [Live Preview](https://stwgabriel.space/basic-js-projects/form-with-validation/)
+### [Live Preview](https://stwgabriel.github.io/basic-js-projects/form-with-validation/)
 
 ![Preview](https://github.com/stwgabriel/basic-js-projects/form-with-validation/blob/main/.github/screenshot.png)
 

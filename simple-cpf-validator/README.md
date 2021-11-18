@@ -1,6 +1,6 @@
 # validador de cpf simples
 
-### [Live Preview](https://stwgabriel.space/basic-js-projects/validador-de-cpf-simples/)
+### [Live Preview](https://stwgabriel.github.io/basic-js-projects/validador-de-cpf-simples/)
 
 ![Preview](https://github.com/stwgabriel/basic-js-projects/validador-de-cpf-simples/blob/main/src/assets/screenshot.png)
 
