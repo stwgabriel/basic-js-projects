@@ -9,41 +9,41 @@
   <tr>
     <th width="350px">
       <img src="https://github.com/stwgabriel/basic-js-projects/blob/main/.github/calculator.png">
-      <a href="https://stwgabriel.space/basic-js-projects/simple-calculator">Calculator</a>
+      <a href="/simple-calculator">Calculator</a>
     </th>
     <th width="350px"> 
       <img src="https://github.com/stwgabriel/basic-js-projects/blob/main/.github/cpf-validator.png">
-      <a href="https://stwgabriel.space/basic-js-projects/cpf-validator">CPF Validator</a>
+      <a href="/cpf-validator">CPF Validator</a>
     </th>
     <th width="350px">
       <img src="https://github.com/stwgabriel/basic-js-projects/blob/main/.github/simple-cpf-validator.png">
-      <a href="https://stwgabriel.space/basic-js-projects/simple-cpf-validator">Simple CPF Validator</a>
+      <a href="/simple-cpf-validator">Simple CPF Validator</a>
     </th>
     
   </tr>
   <tr>
     <th width="350px" color="red">
       <img src="https://github.com/stwgabriel/basic-js-projects/blob/main/.github/val-form.png">
-      <a href="https://stwgabriel.space/basic-js-projects/form-with-validation">Form With Validation</a>
+      <a href="/form-with-validation">Form With Validation</a>
     </th>
     <th width="350px"> 
       <img src="https://github.com/stwgabriel/basic-js-projects/blob/main/.github/imc.png">
-      <a href="https://stwgabriel.space/basic-js-projects/imc">Imc</a>
+      <a href="/imc">Imc</a>
     </th>
     <th width="350px">
       <img src="https://github.com/stwgabriel/basic-js-projects/blob/main/.github/pass-gen.png">
-      <a href="https://stwgabriel.space/basic-js-projects/password-generator">Password Generator</a>
+      <a href="/password-generator">Password Generator</a>
     </th>
   </tr> 
   
   <tr >
     <th width="350px" color="red">
       <img src="https://github.com/stwgabriel/basic-js-projects/blob/main/.github/timer.png">
-      <a href="https://stwgabriel.space/basic-js-projects/timer">Timer</a>
+      <a href="/timer">Timer</a>
     </th>
     <th width="350px"> 
       <img src="https://github.com/stwgabriel/basic-js-projects/blob/main/.github/todo-list.png">
-      <a href="https://stwgabriel.space/basic-js-projects/simple-todo">Todo List</a>
+      <a href="/simple-todo">Todo List</a>
     </th>
   </tr>
  </table>
